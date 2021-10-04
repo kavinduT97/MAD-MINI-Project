@@ -5,7 +5,7 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="SunShine Hotel and Restaurant"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.EventBooking">
@@ -16,13 +16,22 @@
             android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".MainActivity"
+            android:exported="true"
+            android:parentActivityName=".Menu"/>
+
+        <activity android:name=".Menu"
+            android:label="Menu"/>
+        <activity android:name=".Register" />
+        <activity android:name=".Login"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
+
     </application>
 
 </manifest>
