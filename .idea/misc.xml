@@ -3,9 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/KAVINDU/AndroidStudioProjects/EventBooking/app/src/main/res/drawable-v24/cerclebackgroundgreen.xml" value="0.1" />
+        <entry key="..\:/Users/KAVINDU/AndroidStudioProjects/EventBooking/app/src/main/res/drawable-v24/custon_button_login.xml" value="0.1125" />
         <entry key="..\:/Users/KAVINDU/AndroidStudioProjects/EventBooking/app/src/main/res/layout/activity_add.xml" value="0.25" />
+        <entry key="..\:/Users/KAVINDU/AndroidStudioProjects/EventBooking/app/src/main/res/layout/activity_login.xml" value="0.1" />
         <entry key="..\:/Users/KAVINDU/AndroidStudioProjects/EventBooking/app/src/main/res/layout/activity_main.xml" value="0.19010416666666666" />
+        <entry key="..\:/Users/KAVINDU/AndroidStudioProjects/EventBooking/app/src/main/res/layout/activity_menu_student.xml" value="0.1" />
+        <entry key="..\:/Users/KAVINDU/AndroidStudioProjects/EventBooking/app/src/main/res/layout/activity_register.xml" value="0.2" />
         <entry key="..\:/Users/KAVINDU/AndroidStudioProjects/EventBooking/app/src/main/res/layout/my_row.xml" value="0.33" />
+        <entry key="..\:/Users/KAVINDU/Desktop/EventBooking/app/src/main/res/drawable-v24/ic_portrait.xml" value="0.1648148148148148" />
+        <entry key="..\:/Users/KAVINDU/Desktop/EventBooking/app/src/main/res/layout/activity_add.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/KAVINDU/Desktop/EventBooking/app/src/main/res/layout/activity_login.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/KAVINDU/Desktop/EventBooking/app/src/main/res/layout/activity_update.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/KAVINDU/Desktop/EventBooking/app/src/main/res/layout/my_row.xml" value="0.20416666666666666" />
       </map>
     </option>
   </component>

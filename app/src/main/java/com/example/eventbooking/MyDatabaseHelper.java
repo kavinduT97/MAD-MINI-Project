@@ -22,7 +22,7 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
     private static final String COLUMN_TIME = "time";
     private static final String COLUMN_TYPE = "venue_type";
 
-    public MyDatabaseHelper(@Nullable Context context) {
+    MyDatabaseHelper(@Nullable Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
         this.context = context;
     }
@@ -46,11 +46,11 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
         onCreate(db);
 
     }
-    void addEvent(String category, String guests, String date, String time, String type){
+    void addEvent(String event, String guests, String date, String time, String type){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
 
-        cv.put(COLUMN_CATEGORY, category);
+        cv.put(COLUMN_CATEGORY, event);
         cv.put(COLUMN_GUESTS, guests);
         cv.put(COLUMN_DATE, date);
         cv.put(COLUMN_TIME, time);
@@ -71,6 +71,24 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
             cursor = db.rawQuery(query,null);
         }
         return cursor;
+    }
+
+    void updateData(String row_id, String event, String guests, String date, String time, String venue){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+        cv.put(COLUMN_CATEGORY, event);
+        cv.put(COLUMN_GUESTS, guests);
+        cv.put(COLUMN_DATE, date);
+        cv.put(COLUMN_TIME, time);
+        cv.put(COLUMN_TYPE, venue);
+
+        long result = db.update(TABLE_NAME, cv,"id=?", new String[]{row_id});
+        if (result == -1){
+            Toast.makeText(context, "Failed to Update", Toast.LENGTH_SHORT).show();
+        }else{
+            Toast.makeText(context, "Successfully Updated", Toast.LENGTH_SHORT).show();
+        }
+
     }
 
 }

@@ -1,5 +1,6 @@
 package com.example.eventbooking;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -49,10 +50,18 @@ public class MainActivity extends AppCompatActivity {
 
         StoreDataInArrays();
 
-        customAdapter = new CustomAdapter(MainActivity.this, event_id, event_category, event_guests, event_date, event_time,
+        customAdapter = new CustomAdapter(MainActivity.this,this, event_id, event_category, event_guests, event_date, event_time,
                 event_venue);
         recyclerView.setAdapter(customAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(MainActivity.this));
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 1){
+            recreate();
+        }
     }
 
     void StoreDataInArrays(){
